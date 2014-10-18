@@ -382,6 +382,19 @@ define([],function(){
 	function pyt(a, b) {
 		return Math.sqrt(a * a + b * b);
 	}
+	
+	function gt(x,y){
+		return (x>y) ? 1 : 0;
+	}
+	
+	function lt(x,y){
+		return (x<y) ? 1 : 0;
+	}
+	
+	function eq(x,y){
+		return (x==y) ? 1 : 0;
+	}
+
 
 	function append(a, b) {
 		if (Object.prototype.toString.call(a) != "[object Array]") {
@@ -433,6 +446,9 @@ define([],function(){
 		};
 
 		this.functions = {
+			"eq": eq,
+			"gt": gt,
+			"lt": lt,
 			"random": random,
 			"fac": fac,
 			"min": Math.min,
